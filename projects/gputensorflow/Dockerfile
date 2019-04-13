@@ -1,4 +1,4 @@
-# Image file ubuntu16.04
+# Image file gpu
 FROM nvidia/cuda:9.0-cudnn7-runtime
 
 LABEL Yashio Kabashima
@@ -43,6 +43,7 @@ RUN pyenv rehash
 # upgrade pip
 ENV pip /root/.pyenv/shims/pip
 RUN $pip install --upgrade pip
+RUN $pip install ipython
 # ADD ./requirements.txt /root/requirements.txt
 # RUN /root/.pyenv/shims/pip install -r /root/requirements.txt
 
