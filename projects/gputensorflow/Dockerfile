@@ -1,5 +1,5 @@
 # Image file gpu
-FROM nvidia/cuda:9.0-cudnn7-runtime
+FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
 LABEL Yashio Kabashima
 
@@ -44,7 +44,7 @@ RUN pyenv rehash
 ENV pip /root/.pyenv/shims/pip
 RUN $pip install --upgrade pip
 RUN $pip install ipython
-RUN $pip install tensorflow-gpu==1.12.0
+RUN $pip install tensorflow-gpu
 # ADD ./requirements.txt /root/requirements.txt
 # RUN /root/.pyenv/shims/pip install -r /root/requirements.txt
 
