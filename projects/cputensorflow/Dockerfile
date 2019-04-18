@@ -1,5 +1,5 @@
-# Image file ubuntu16.04
-FROM ubuntu:16.04
+# Image file ubuntu18.04
+FROM ubuntu:18.04
 
 LABEL Yashio Kabashima
 
@@ -44,7 +44,7 @@ RUN pyenv rehash
 ENV pip /root/.pyenv/shims/pip
 RUN $pip install --upgrade pip
 RUN $pip install ipython
-RUN $pip install tensorflow==1.12.0
+RUN $pip install tensorflow
 # ADD ./requirements.txt /root/requirements.txt
 # RUN /root/.pyenv/shims/pip install -r /root/requirements.txt
 
