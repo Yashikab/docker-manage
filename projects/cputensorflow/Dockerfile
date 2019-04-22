@@ -44,7 +44,7 @@ RUN pyenv rehash
 ENV pip /root/.pyenv/shims/pip
 RUN $pip install --upgrade pip
 RUN $pip install ipython
-RUN $pip install tensorflow
+RUN $pip install tensorflow==1.12.0
 # ADD ./requirements.txt /root/requirements.txt
 # RUN /root/.pyenv/shims/pip install -r /root/requirements.txt
 
