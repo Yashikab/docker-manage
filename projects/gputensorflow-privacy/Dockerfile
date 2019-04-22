@@ -1,5 +1,6 @@
+# this only use on home pc linux.
 # Image file gpu
-FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 
 LABEL Yashio Kabashima
 
@@ -43,7 +44,7 @@ RUN pyenv rehash
 # upgrade pip
 ENV pip /root/.pyenv/shims/pip
 RUN $pip install --upgrade pip
-RUN $pip install tensorflow-gpu==1.12
+RUN $pip install tensorflow-gpu==1.13
 # ADD ./requirements.txt /root/requirements.txt
 # RUN /root/.pyenv/shims/pip install -r /root/requirements.txt
 
