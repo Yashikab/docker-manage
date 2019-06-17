@@ -1,7 +1,7 @@
 # Image file ubuntu18.04
 FROM ubuntu:18.04
 
-LABEL Yashi
+MAINTAINER Yashio Kabashima
 
 # use bash
 SHELL ["/bin/bash", "-c"]
