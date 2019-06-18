@@ -58,10 +58,6 @@ RUN echo "c.NotebookApp.kernel_spec_manager_class='environment_kernels.Environme
 RUN echo "c.EnvironmentKernelSpecManager.conda_env_dirs = [ '/root/.pyenv/versions/anaconda3-5.3.1/envs/' ]" >> ~/.jupyter/jupyter_notebook_config.py
 RUN echo "c.MultiKernelManager.default_kernel_name = python3.6.8" >> ~/.jupyter/jupyter_notebook_config.py
 
-# Run jupyter-lab at docker-compose up
-CMD jupyter-lab --no-browser \
-    --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.password='sha1:408161a8c9a2:c3bc403dfe03f329997889dd5e8e06519f95b408'
-
 # codec
 WORKDIR /
 RUN locale-gen en_US.UTF-8
