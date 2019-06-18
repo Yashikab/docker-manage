@@ -29,7 +29,10 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     automake \
     python \
-    python-pip
+    python-pip \
+    libsm6 \ 
+    libxext6 \ 
+    libxrender-dev
 
 # install pyenv & anaconda3
 ENV HOME /root
@@ -49,7 +52,6 @@ RUN pip install --upgrade jupyter
 
 # install python3.6.8 kernel
 RUN conda create -n python3.6.8 python=3.6.8 anaconda
-RUN . /root/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
 ENV ipython368 /root/.pyenv/versions/anaconda3-5.3.1/envs/python3.6.8/bin/ipython
 RUN $ipython368 kernel install --user --name=python3.6.8 --display-name=python3.6.8
 RUN pip install environment_kernels

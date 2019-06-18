@@ -26,7 +26,10 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     automake \
     python \
-    python-pip
+    python-pip \
+    libsm6 \ 
+    libxext6 \ 
+    libxrender-dev
 
 # install python 3.6.8 via pyenv
 ENV HOME /root
