@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3.7 get-pip.py
-RUN pip3.7 install pipenv
+# RUN pip3.7 install pipenv
 
 # codec
 WORKDIR /
@@ -54,5 +54,9 @@ RUN useradd -u 1003 -m -d /home/${user} ${user} \
     && chown -R ${user}:${user} /home/${user}
 RUN echo "${user}:${pass}" | chpasswd
 RUN echo "contuser1    ALL=(ALL)       ALL" >> /etc/sudoers
+
+USER contuser1
+RUN pip3.7 install pipenv --user
+
 
 WORKDIR /home/contuser1
