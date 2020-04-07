@@ -61,4 +61,5 @@ ENV PATH $PATH:/home/contuser1/.local/bin
 RUN pip3.7 install pipenv --user
 RUN pip3.7 install jupyterlab --user
 
+
 WORKDIR /home/contuser1
