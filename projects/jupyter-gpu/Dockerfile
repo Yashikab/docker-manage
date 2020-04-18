@@ -67,6 +67,6 @@ ENV PATH $PATH:/home/contuser1/.local/bin
 RUN pip3.7 install pipenv --user
 RUN pip3.7 install jupyterlab --user
 RUN pip3.7 install jupyterlab_code_formatter --user
-
+RUN jupyter labextension install base16-monokai
 
 WORKDIR /home/contuser1
