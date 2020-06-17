@@ -4,6 +4,7 @@ RUN apk update
 RUN apk upgrade
 RUN apk --update-cache \
     add curl \
+    git \
     python3 \
     python3-dev \
     py-pip
