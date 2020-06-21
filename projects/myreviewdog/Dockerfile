@@ -11,6 +11,3 @@ RUN pip install pipenv==2018.11.26
 RUN pipenv install --dev --system
 RUN curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
 ENV PATH $PATH:./bin/
-
-RUN sh src/token2env.sh
-RUN echo $REVIEWDOG_GITHUB_API_TOKEN
