@@ -12,4 +12,5 @@ RUN pipenv install --dev --system
 RUN curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
 ENV PATH $PATH:./bin/
 
-CMD ["sh", "token2env.sh"]
+RUN sh src/token2env.sh
+RUN echo $REVIEWDOG_GITHUB_API_TOKEN
