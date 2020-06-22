@@ -32,7 +32,7 @@ def make_auth_header(installation_id):
         print(r.json()['message'])
         r.raise_for_status()
     token = r.json()['token']
-    with open('token.conf', 'w') as f:
+    with open('/src/token.conf', 'w') as f:
         f.write(token)
     return {
         'Authorization': f'token {token}',
