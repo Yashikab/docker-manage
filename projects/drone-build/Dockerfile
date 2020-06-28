@@ -9,8 +9,7 @@ RUN apk --no-cache add \
     git \
     curl \
     gcc \
-    make \
-    service
+    make
 RUN which sh
 
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
